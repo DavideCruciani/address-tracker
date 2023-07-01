@@ -79,8 +79,8 @@ const Page = () => {
         <div className='container mx-auto font-Electrolize px-4'>
           <div className='flex flex-col items-center sm:flex-row justify-between text-white py-6'>
             <p>Made by Davide Cruciani</p>
-            <p>Map by <a className='text-gray-300 underline' href="https://leafletjs.com/">Leaflet</a></p>
-            <p>IP Geolocation API by <a className='text-gray-300 underline' href="https://geo.ipify.org/">Ipify</a></p>
+            <p>Map by <a className='text-gray-300 underline' href="https://leafletjs.com/" target='_blank'>Leaflet</a></p>
+            <p>IP Geolocation API by <a className='text-gray-300 underline' href="https://geo.ipify.org/" target='_blank'>Ipify</a></p>
           </div>
         </div>
       </footer>
