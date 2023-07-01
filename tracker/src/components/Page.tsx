@@ -54,19 +54,19 @@ const Page = () => {
             <button className="bg-[#22577a] hover:bg-[#143245] text-white p-3 rounded-r-lg" onClick={handleGoButtonClick}>GO</button>
           </div>
           <div className="flex justify-center my-12">
-            <div className="bg-white text-[#22577a] p-4 rounded-l-lg flex flex-col gap-5">
+            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] rounded-l-lg flex flex-col gap-5">
               <p className="text-xl">IP Address</p>
               <p className="text-2xl font-bold">{ipResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 flex flex-col gap-5">
+            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] flex flex-col gap-5">
               <p className="text-xl">Location</p>
               <p className="text-2xl font-bold">{locationResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 flex flex-col gap-5">
+            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] flex flex-col gap-5">
               <p className="text-xl">Timezone</p>
               <p className="text-2xl font-bold">{timezoneResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 rounded-r-lg flex flex-col gap-5">
+            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] rounded-r-lg flex flex-col gap-5">
               <p className="text-xl">ISP</p>
               <p className="text-2xl font-bold">{ispResult}</p>
             </div>
