@@ -45,35 +45,46 @@ const Page = () => {
 
 
   return (
+    <>
     <section className="bg-gray-300 min-h-screen py-6">
-        <div className="container mx-auto font-Electrolize">
-          <h1 className="text-[#22577a] text-6xl text-center">IP ADDRESS TRACKER</h1>
-          <p className="text-[#22577a] text-xl text-center my-3">Insert an IP Address and watch the results!</p>
+        <div className="container mx-auto font-Electrolize px-4">
+          <h1 className="text-[#22577a] text-4xl md:text-6xl text-center">IP ADDRESS TRACKER</h1>
+          <p className="text-[#22577a] text-lg md:text-xl text-center my-3">Insert an IP Address and watch the results!</p>
           <div className="flex justify-center">
-            <input id='ipInput' type="text" className="w-1/3 p-2 outline-none rounded-l-lg text-xl" />
+            <input id='ipInput' type="text" className="min-w-[200px] w-1/3 p-3 outline-none rounded-l-lg text-xl" />
             <button className="bg-[#22577a] hover:bg-[#143245] text-white p-3 rounded-r-lg" onClick={handleGoButtonClick}>GO</button>
           </div>
-          <div className="flex justify-center my-12">
-            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] rounded-l-lg flex flex-col gap-5">
-              <p className="text-xl">IP Address</p>
-              <p className="text-2xl font-bold">{ipResult}</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 my-6 md:my-12 gap-2">
+            <div className="bg-white text-[#22577a] p-4 rounded-tl-lg md:rounded-l-lg flex flex-col gap-5">
+              <p className="text-lg lg:text-xl">IP Address:</p>
+              <p className="text-base sm:text-lg lg:text-xl font-bold">{ipResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] flex flex-col gap-5">
-              <p className="text-xl">Location</p>
-              <p className="text-2xl font-bold">{locationResult}</p>
+            <div className="bg-white text-[#22577a] p-4 rounded-tr-lg md:rounded-none flex flex-col gap-5">
+              <p className="text-lg lg:text-xl">Location:</p>
+              <p className="text-base sm:text-lg lg:text-xl font-bold">{locationResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] flex flex-col gap-5">
-              <p className="text-xl">Timezone</p>
-              <p className="text-2xl font-bold">{timezoneResult}</p>
+            <div className="bg-white text-[#22577a] p-4 rounded-bl-lg md:rounded-none flex flex-col gap-5">
+              <p className="text-lg lg:text-xl">Timezone:</p>
+              <p className="text-base sm:text-lg lg:text-xl font-bold">{timezoneResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 sm:w-[300px] rounded-r-lg flex flex-col gap-5">
-              <p className="text-xl">ISP</p>
-              <p className="text-2xl font-bold">{ispResult}</p>
+            <div className="bg-white text-[#22577a] p-4 rounded-br-lg md:rounded-r-lg flex flex-col gap-5">
+              <p className="text-lg lg:text-xl">ISP:</p>
+              <p className="text-base sm:text-lg lg:text-xl font-bold">{ispResult}</p>
             </div>
           </div>
-          <Map lon={lon}  lat={lat}/>
+          <Map lon={lon} lat={lat}/>
         </div>
       </section>
+      <footer className='bg-[#22577a]'>
+        <div className='container mx-auto font-Electrolize px-4'>
+          <div className='flex flex-col items-center sm:flex-row justify-between text-white py-6'>
+            <p>Made by Davide Cruciani</p>
+            <p>Map by <a className='text-gray-300 underline' href="https://leafletjs.com/">Leaflet</a></p>
+            <p>IP Geolocation API by <a className='text-gray-300 underline' href="https://geo.ipify.org/">Ipify</a></p>
+          </div>
+        </div>
+      </footer>
+      </>
   )
 }
 
