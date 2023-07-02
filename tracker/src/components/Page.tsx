@@ -33,6 +33,7 @@ const Page = () => {
         handleIpAddressFetched();
       } catch (error) {
         console.error('Error:', error);
+        alert("Invalid IP Address!")
       }
     };
 
