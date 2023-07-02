@@ -25,7 +25,7 @@ const Map: React.FC<Props> = ({ lon, lat }) => {
   }, [lon, lat]);
 
   return (
-    <div className='h-[500px] w-full border-4 border-[#22577a]' id='map' ref={mapRef}></div>
+    <div className='h-[500px] w-full border-4 border-blue-600 mb-12' id='map' ref={mapRef}></div>
   )
 }
 

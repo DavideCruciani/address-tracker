@@ -47,28 +47,29 @@ const Page = () => {
 
   return (
     <>
-    <section className="bg-gray-300 min-h-screen py-6">
+    <section className="bg-white min-h-screen pt-6">
         <div className="container mx-auto font-Electrolize px-4">
-          <h1 className="text-[#22577a] text-4xl md:text-6xl text-center">IP ADDRESS TRACKER</h1>
-          <p className="text-[#22577a] text-lg md:text-xl text-center my-3">Insert an IP Address and watch the results!</p>
+          <h1 className="text-blue-600 text-4xl md:text-6xl text-center">IP ADDRESS TRACKER</h1>
+          <img src="globe.png" className='w-36 mx-auto my-12' alt="A globe" />
+          <p className="text-blue-600 text-lg md:text-xl text-center my-3">Insert an IP Address and watch the results!</p>
           <div className="flex justify-center">
-            <input id='ipInput' type="text" className="min-w-[200px] w-1/3 p-3 outline-none rounded-l-lg text-xl" />
-            <button className="bg-[#22577a] hover:bg-[#143245] text-white p-3 rounded-r-lg" onClick={handleGoButtonClick}>GO</button>
+            <input id='ipInput' type="text" className="min-w-[200px] w-1/3 p-3 outline-none rounded-l-lg text-xl bg-gray-200" />
+            <button className="bg-blue-600 hover:bg-[#143245] text-white p-3 rounded-r-lg" onClick={handleGoButtonClick}>GO</button>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 my-6 md:my-12 gap-2">
-            <div className="bg-white text-[#22577a] p-4 rounded-tl-lg md:rounded-l-lg flex flex-col gap-5">
+            <div className="bg-gray-200 text-blue-600 p-4 rounded-tl-lg md:rounded-l-lg flex flex-col gap-5">
               <p className="text-lg lg:text-xl">IP Address:</p>
-              <p className="text-base sm:text-lg lg:text-xl font-bold">{ipResult}</p>
+              <p className="text-base sm:text-lg lg:text-xl font-bold break-words">{ipResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 rounded-tr-lg md:rounded-none flex flex-col gap-5">
+            <div className="bg-gray-200 text-blue-600 p-4 rounded-tr-lg md:rounded-none flex flex-col gap-5">
               <p className="text-lg lg:text-xl">Location:</p>
               <p className="text-base sm:text-lg lg:text-xl font-bold">{locationResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 rounded-bl-lg md:rounded-none flex flex-col gap-5">
+            <div className="bg-gray-200 text-blue-600 p-4 rounded-bl-lg md:rounded-none flex flex-col gap-5">
               <p className="text-lg lg:text-xl">Timezone:</p>
               <p className="text-base sm:text-lg lg:text-xl font-bold">{timezoneResult}</p>
             </div>
-            <div className="bg-white text-[#22577a] p-4 rounded-br-lg md:rounded-r-lg flex flex-col gap-5">
+            <div className="bg-gray-200 text-blue-600 p-4 rounded-br-lg md:rounded-r-lg flex flex-col gap-5">
               <p className="text-lg lg:text-xl">ISP:</p>
               <p className="text-base sm:text-lg lg:text-xl font-bold">{ispResult}</p>
             </div>
@@ -76,7 +77,7 @@ const Page = () => {
           <Map lon={lon} lat={lat}/>
         </div>
       </section>
-      <footer className='bg-[#22577a]'>
+      <footer className='bg-blue-600'>
         <div className='container mx-auto font-Electrolize px-4'>
           <div className='flex flex-col items-center sm:flex-row justify-between text-white py-6'>
             <p>Made by Davide Cruciani</p>
