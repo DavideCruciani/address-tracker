@@ -12,12 +12,18 @@ const Map: React.FC<Props> = ({ lon, lat }) => {
   useEffect(() => {
     const map = L.map(mapRef.current!).setView([lon, lat], 2);
 
+    const redIcon = L.icon({
+      iconUrl: '/src/assets/marker.png',
+      iconSize: [24, 38],
+      iconAnchor: [10, 38],
+  });
+
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     }).addTo(map);
 
-    L.marker([lat, lon]).addTo(map);
+    L.marker([lat, lon], {icon: redIcon}).addTo(map);
     map.flyTo([lat, lon], 13);
     return () => {
       map.remove();
