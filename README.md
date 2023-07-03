@@ -6,6 +6,6 @@ This project is a web application that allows users to geolocate an IP address. 
 
 ## Live Demo
 
-https://ipify-geolocator.netlify.app/
+[Visit the demo](https://ipify-geolocator.netlify.app/){:target="_blank"}
 
 🤓🔎🌎
