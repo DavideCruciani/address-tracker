@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Icon from '../assets/marker.png'
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -13,7 +14,7 @@ const Map: React.FC<Props> = ({ lon, lat }) => {
     const map = L.map(mapRef.current!).setView([lon, lat], 2);
 
     const redIcon = L.icon({
-      iconUrl: '/src/assets/marker.png',
+      iconUrl: `${Icon}`,
       iconSize: [24, 38],
       iconAnchor: [10, 38],
   });
