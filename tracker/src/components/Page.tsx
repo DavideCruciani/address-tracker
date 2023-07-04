@@ -49,12 +49,17 @@ const Page = () => {
     <>
     <section className="bg-white min-h-screen pt-6">
         <div className="container mx-auto font-Electrolize px-4">
-          <h1 className="text-blue-600 text-4xl md:text-6xl text-center">IP ADDRESS TRACKER</h1>
+          <h1 className="text-blue-600 text-4xl md:text-6xl text-center font-bold">IP ADDRESS TRACKER</h1>
           <img src="globe.png" className='w-36 mx-auto my-12' alt="A globe" />
-          <p className="text-blue-600 text-lg md:text-xl text-center my-3">Insert an IP Address and watch the results!</p>
+          <p className="text-blue-600 text-lg md:text-xl text-center my-3 font-bold">Insert an IP Address and watch the results!</p>
           <div className="flex justify-center">
             <input id='ipInput' type="text" className="min-w-[200px] w-1/3 p-3 outline-none rounded-l-lg text-xl bg-gray-200" />
             <button className="bg-blue-600 hover:bg-[#143245] text-white p-3 rounded-r-lg" onClick={handleGoButtonClick}>GO</button>
+          </div>
+          <div className='flex flex-col items-center mt-3 md:text-lg text-blue-600 break-words'>
+            <p className='font-bold'>Here some IP addresses you can try:</p>
+            <p>160.80.80.100 / 2.41.2.10</p>
+            <p>35.214.7.178 / 161.0.8.228</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 my-6 md:my-12 gap-2">
             <div className="bg-gray-200 text-blue-600 p-4 rounded-tl-lg md:rounded-l-lg flex flex-col gap-5">
